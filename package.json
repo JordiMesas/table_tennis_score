@@ -1,4 +1,5 @@
 {
+  "homepage": "https://JordiMesas.github.io/table_tennis_score",
   "name": "prueba",
   "version": "0.1.0",
   "private": true,
@@ -12,25 +13,12 @@
     "web-vitals": "^1.0.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.16",
-    "@babel/plugin-transform-runtime": "^7.12.15",
-    "@babel/preset-env": "^7.12.16",
-    "@babel/preset-react": "^7.12.13",
-    "babel-eslint": "^10.1.0",
-    "babel-loader": "^8.2.2",
-    "eslint": "^7.20.0",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-config-prettier": "^7.2.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-react": "^7.22.0",
-    "sass": "^1.32.7",
-    "sass-loader": "^11.0.1",
-    "style-loader": "^2.0.0",
-    "url-loader": "^4.1.1"
+    "babel-loader": "8.1.0",
+    "gh-pages": "^3.1.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
