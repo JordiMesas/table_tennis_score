@@ -1,0 +1,29 @@
+@import './variables.scss';
+@import './mixins';
+header{
+    background-color: $color-purple;
+    nav {
+        padding: 7.5% 0 10%;  
+        @media (min-width: 768px) { 
+            padding: 4% 0;
+        }      
+        color:$color-white;
+        .header-title {
+            display: $flex;
+            flex-direction: $row;
+            justify-content: start;
+            align-items: $center;
+            img {
+                width: 10.5%;
+                margin-left: 8%;
+                @media (min-width: 768px) { 
+                    width: 5%;
+                }              
+            }
+        }
+        .header-name {
+            padding-top: 9px;
+           	
+        }
+    }
+}

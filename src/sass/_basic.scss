@@ -1,0 +1,44 @@
+@import './variables.scss';
+@import './mixins';
+// General tags style
+
+//font-family to title
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: $body-size-s;
+    @media (min-width: 768px) {
+        font-size: $body_size_t;
+     }
+     
+    .container{        
+        padding: 0 7%;
+        @media (min-width: 1024px) {
+            padding: 0 15%;
+         }
+        h1{
+            font-family: 'Bree Serif', serif;
+            font-size: $title-size;                
+        }
+        p{
+            font-weight: $bold;              
+        }
+        
+        li{
+            list-style: none;        
+        }
+       
+        img{        
+            max-width: $max-width;                                     
+        }
+       	
+    }
+    
+   
+}

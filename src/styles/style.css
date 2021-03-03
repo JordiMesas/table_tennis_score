@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1em;
+}
+@media (min-width: 768px) {
+  body {
+    font-size: 1.2em;
+  }
+}
+body .container {
+  padding: 0 7%;
+}
+@media (min-width: 1024px) {
+  body .container {
+    padding: 0 15%;
+  }
+}
+body .container h1 {
+  font-family: "Bree Serif", serif;
+  font-size: 1.5em;
+}
+body .container p {
+  font-weight: bold;
+}
+body .container li {
+  list-style: none;
+}
+body .container img {
+  max-width: 100%;
+}
+
+header {
+  background-color: #8d7cc2;
+}
+header nav {
+  padding: 7.5% 0 10%;
+  color: white;
+}
+@media (min-width: 768px) {
+  header nav {
+    padding: 4% 0;
+  }
+}
+header nav .header-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+header nav .header-title img {
+  width: 10.5%;
+  margin-left: 8%;
+}
+@media (min-width: 768px) {
+  header nav .header-title img {
+    width: 5%;
+  }
+}
+header nav .header-name {
+  padding-top: 9px;
+}
+
+main {
+  transform: translateY(-21%);
+  background-color: white;
+  border-radius: 10px 10px 0 0;
+}
+main .score nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+main .score nav .score-allGames {
+  padding: 10px 0;
+  display: flex;
+}
+main .score nav .score-allGames > li {
+  font-size: 0.8em;
+  display: flex;
+  justify-content: flex-end;
+}
+main .score nav .score-allGames .score-allGames-animate {
+  margin-left: 10px;
+  width: 12px;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 105 105"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="chevron-down-black.svg"
+   width="105"
+   height="105"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)">
+  <metadata
+     id="metadata10">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview6"
+     showgrid="false"
+     inkscape:zoom="2.1864179"
+     inkscape:cx="52.5"
+     inkscape:cy="52.5"
+     inkscape:window-x="1358"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
+  <!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+  <path
+     d="M 48.568468,99.181956 4.0644595,25.847506 c -2.1463911,-3.53684 -2.1463911,-9.27096 0,-12.80742 L 9.2551402,4.4868458 C 11.397867,0.95603581 14.87061,0.94924581 17.018375,4.4717458 L 52.45478,62.590576 87.890957,4.4717458 c 2.147765,-3.52249999 5.620508,-3.51570999 7.763235,0.0151 l 5.190688,8.5532402 c 2.14639,3.53684 2.14639,9.27095 0,12.80742 l -44.503787,73.33445 c -2.146392,3.536464 -5.626233,3.536464 -7.772625,0 z"
+     id="path2"
+     style="stroke-width:0.293957" />
+</svg>
