@@ -68,11 +68,17 @@ header nav .header-name {
 }
 
 main {
-  transform: translateY(-21%);
+  padding-top: 10px;
   background-color: white;
   border-radius: 10px 10px 0 0;
 }
+main .score {
+  padding-top: 10px;
+  font-size: 0.8em;
+}
 main .score nav {
+  background-color: #eeeeee;
+  border-radius: 5px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -83,13 +89,58 @@ main .score nav .score-allGames {
   display: flex;
 }
 main .score nav .score-allGames > li {
-  font-size: 0.8em;
   display: flex;
   justify-content: flex-end;
 }
 main .score nav .score-allGames .score-allGames-animate {
   margin-left: 10px;
   width: 12px;
+}
+main .score nav button, main .score nav .score-allGames {
+  margin: 0 5%;
+}
+main .score nav button {
+  padding: 0.62%;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid #9f8bdb;
+  background-color: #b7abdaa4;
+}
+main .score .match-items {
+  margin: 5% 0;
+  color: #4c28b9;
+}
+main .score .match-items .match-items-layout {
+  padding: 2%;
+  background-color: #b7abdaa4;
+  width: 80%;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: 70% 20%;
+  border-radius: 5px;
+}
+main .score .match-items .match-items-layout div:first-of-type p {
+  padding: 5px 0;
+}
+main .score .match-items .match-items-layout div:last-of-type {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 30px;
+}
+main .score .match-items .match-items-layout div:last-of-type img {
+  width: 14px;
+}
+main .score .match-items .match-items-styleWinner {
+  width: 80%;
+  padding: 4.5%;
+  margin-top: 1%;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(255, 255, 0, 0.589);
+  border-radius: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */

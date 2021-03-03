@@ -17,7 +17,8 @@ body{
         font-size: $body_size_t;
      }
      
-    .container{        
+    .container{
+        
         padding: 0 7%;
         @media (min-width: 1024px) {
             padding: 0 15%;

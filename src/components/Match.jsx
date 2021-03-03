@@ -7,18 +7,19 @@ const Match = ({ match }) => {
 
 	return (
 		<div className='match-items'>
-			<div>
+			<div className='match-items-layout'>
 				<div>
 					<p>
-						{match.playerHome} vs {match.playerOut}
+						Players: {match.playerHome} vs {match.playerOut}
 					</p>
-					<p>{match.score}</p>
+					<p> Score: {match.score}</p>
 				</div>
 				<div >
 					<img onClick={() => setShow(!toggle)} src={!toggle ? purpleRightArrow : purpleDownArrow} alt='arrow' />
 				</div>
 			</div>
-			{toggle && <p>The {match.winner} player is the winner</p>}
+				{toggle && <p className="match-items-styleWinner">The {match.winner} player is the winner</p>}
+			
 		</div>
 	);
 };

@@ -2,18 +2,20 @@
 @import './mixins';
 
 main{
-    transform: translateY(-21%);
+    padding-top: 10px;
     background-color: $color-white;
     border-radius: 10px 10px 0 0;
     .score{
-        
+        padding-top: 10px;
+        font-size: 0.8em;          
         nav{
+            background-color: #eeeeee;  
+            border-radius: $border-radius;                               
             @include modelFlexRow;
             .score-allGames{ 
                 padding: 10px 0;                            
                 display: $flex;                
-                & > li{
-                    font-size: 0.8em;
+                & > li{                    
                     display: $flex;                    
                     justify-content: flex-end;                       
                     
@@ -21,9 +23,56 @@ main{
                 .score-allGames-animate{
                     margin-left: 10px;
                     width: 12px;
-                }
-                 
+                }                
                           
+            }
+            button,.score-allGames{
+                margin: 0 5%;               
+            }
+            button{
+                padding: 0.62%;
+                font-weight: bold;                 
+                border-radius: $border-radius; 
+                cursor: $pointer;
+                border: 1px solid #9f8bdb;
+                background-color: #b7abdaa4;
+            }
+        }
+        .match-items{
+            margin: 5% 0;
+            color: #4c28b9;         
+            .match-items-layout{
+                padding: 2%;
+                background-color: #b7abdaa4;
+                width: 80%;
+                display: grid;
+                justify-content: center;
+                align-content: center;
+                grid-template-columns: 70% 20%;
+                border-radius: $border-radius;
+                div:first-of-type{
+                    p{
+                        padding: 5px 0;
+                    }
+                }
+                div:last-of-type{                    
+                    display: $flex;
+                    align-items: $center;
+                    justify-content: flex-end;
+                    width: 30px;
+                    img{
+                        width: 14px;
+                    }
+                }
+            }
+            .match-items-styleWinner{
+                width: 80%;
+                padding: 4.5%;
+                margin-top: 1%;
+                display: $flex;
+                justify-content: $center;
+                background-color: rgba(255, 255, 0, 0.589);
+                border-radius: $border-radius;
             }
         }
     }

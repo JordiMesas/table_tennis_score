@@ -7,18 +7,18 @@ const MatchNotLastMonth = ({ matchNotLastMonth }) => {
 
 	return (
 		<div className='match-items'>
-			<div>
+			<div  className='match-items-layout'>
 				<div>
 					<p>
-						{matchNotLastMonth.playerHome} vs {matchNotLastMonth.playerOut}
+						Players: {matchNotLastMonth.playerHome} vs {matchNotLastMonth.playerOut}
 					</p>
-					<p>{matchNotLastMonth.score}</p>
+					<p> Score:{matchNotLastMonth.score}</p>
 				</div>
 				<div>
 					<img  onClick={() => setShow(!toggle)} src={!toggle ? purpleRightArrow : purpleDownArrow} alt='arrow' />
 				</div>
 			</div>
-			{toggle && <p>The {matchNotLastMonth.winner} player is the winner</p>}
+			{toggle && <p className="match-items-styleWinner">The {matchNotLastMonth.winner} player is the winner</p>}
 		</div>
 	);
 };
