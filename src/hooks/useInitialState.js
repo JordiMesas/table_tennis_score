@@ -17,18 +17,20 @@ const useInitialState = () =>{
     const dateLastMonthShowDate = () =>{
         
         const notLastMontGames = {
-            notLastMonth: state.matches.filter((items) => {return new Date(Date.parse(items.date)).getMonth() !== new Date().getMonth()}),
-            lastMonth: state.matches.filter((items) => {return new Date(Date.parse(items.date)).getMonth() === new Date().getMonth()})
+            notLastMonth: state.matches.filter((items) => {return new Date(Date.parse(items.date)).getMonth() !== new Date().getMonth() ||  new Date(Date.parse(items.date)).getFullYear() !== new Date().getFullYear() }),
+            lastMonth: state.matches.filter((items) => {return new Date(Date.parse(items.date)).getMonth() === new Date().getMonth() &&  new Date(Date.parse(items.date)).getFullYear() === new Date().getFullYear() })
         };
-        // console.log(notLastMontGames.notLastMonth);
-        // state.matchs.map((items) => { console.log(new Date(Date.parse(items.date)).getMonth()) });
+
+        // console.log( state.matches.filter((items) => {return new Date(Date.parse(items.date)).getMonth() === new Date().getMonth() &&  new Date(Date.parse(items.date)).getFullYear() === new Date().getFullYear() }));               
+        // console.log( state.matches.filter((items) => {return new Date(Date.parse(items.date)).getMonth() !== new Date().getMonth() ||  new Date(Date.parse(items.date)).getFullYear() !== new Date().getFullYear() }));               
+
         if(notLastMontGames.notLastMonth.length !== 0){
             setState({
                 ...state,                
                 matches: notLastMontGames.lastMonth,
                 matchesNotLastMonth: notLastMontGames.notLastMonth
             });
-        }
+        }        
         
     }
 
