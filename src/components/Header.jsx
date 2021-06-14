@@ -8,7 +8,7 @@ const Header = () => {
 				<div className='header-title'>
 					<h1>Ping Pong Score</h1>
 					<img src={trophy} alt='trophy' />
-				</div>
+				</div>				
 				<div className='header-name'>
 					<p>by Jordi Mesas del Rio</p>
 				</div>
