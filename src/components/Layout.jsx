@@ -1,17 +1,15 @@
 import React from 'react';
 
-import Header from './Header';
-import Main from './Main';
+import Header from '../containers/Header';
 
-const Layout = () =>{
+const Layout = ({children}) =>{
     return (      
         <>
             <header>
                 <Header />
-            </header>
-
+            </header>            
             <main>
-                <Main />
+                {children}
             </main>
         </>
     );

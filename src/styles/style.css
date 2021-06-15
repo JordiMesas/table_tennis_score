@@ -40,12 +40,14 @@ header {
   background-color: #8d7cc2;
 }
 header nav {
-  padding: 7.5% 0 10%;
+  display: grid;
+  padding: 7.5% 10%;
   color: white;
 }
 @media (min-width: 768px) {
   header nav {
     padding: 4% 0;
+    grid-template-columns: auto auto;
   }
 }
 header nav .header-title {
@@ -60,11 +62,27 @@ header nav .header-title img {
 }
 @media (min-width: 768px) {
   header nav .header-title img {
-    width: 5%;
+    width: 10%;
   }
 }
 header nav .header-name {
   padding-top: 9px;
+}
+header nav .header-formHome {
+  margin-top: 10px;
+  font-size: 1.3em;
+}
+@media (min-width: 768px) {
+  header nav .header-formHome {
+    display: flex;
+    justify-content: flex-end;
+  }
+  header nav .header-formHome .fa-home, header nav .header-formHome .fa-table-tennis {
+    font-size: 1.6em;
+  }
+}
+header nav .header-formHome .fa-table-tennis {
+  margin-left: 5px;
 }
 
 main {
@@ -93,7 +111,7 @@ main .score nav .score-allGames {
 }
 main .score nav .score-allGames .score-allGames-animate {
   margin-left: 10px;
-  width: 13px;
+  width: 18px;
 }
 main .score nav button, main .score nav .score-allGames {
   margin: 0 5%;

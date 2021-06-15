@@ -3,9 +3,11 @@
 header{
     background-color: $color-purple;     
     nav {
-        padding: 7.5% 0 10%;  
+        display: grid;
+        padding: 7.5%  10%;  
         @media (min-width: 768px) { 
             padding: 4% 0;
+            grid-template-columns: auto auto;
         }      
         color:$color-white;
         .header-title {
@@ -17,13 +19,27 @@ header{
                 width: 10.5%;
                 margin-left: 8%;
                 @media (min-width: 768px) { 
-                    width: 5%;
+                    width: 10%;
                 }              
             }
         }
         .header-name {
             padding-top: 9px;
            	
+        }
+        .header-formHome{            
+            margin-top: 10px;            
+            font-size: 1.3em;
+            @media (min-width: 768px) { 
+                display: $flex;
+                justify-content: flex-end;          
+                .fa-home,.fa-table-tennis{
+                    font-size: 1.6em;
+                }                
+            } 
+            .fa-table-tennis{
+                margin-left: 5px;                
+            }
         }
     }
 }

@@ -5,15 +5,15 @@ import React, {
 	useRef,
 	useCallback,
 } from 'react';
-import Search from './Search';
-import Match from './Match';
-import MatchNotLastMonth from './MatchNotLastMonth';
+import Search from '../components/Search';
+import Match from '../components/Match';
+import MatchNotLastMonth from '../components/MatchNotLastMonth';
 import Appcontext from '../context/AppContext';
 import blackRightArrow from '../img/chevron-right-black.svg';
 import blackDownArrow from '../img/chevron-down-black.svg';
 
 const Main = () => {
-	const [toggle, setShow] = useState(false);
+	const [toggle, setShow] = useState(true);
 	const [allGames, setGames] = useState(true);
 	const { state, dateLastMonthShowDate } = useContext(Appcontext);
 	const { matches, matchesNotLastMonth } = state;
