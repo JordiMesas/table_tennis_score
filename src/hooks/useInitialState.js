@@ -24,6 +24,15 @@ const useInitialState = () => {
 		
 	};
 
+	const removeMatch = (match)=>{
+		console.log(match);
+		console.log(state.matches.filter((items)=>{return items.id !== match.id}));
+		setState({
+			...state,
+			matches: state.matches.filter((items)=>{return items.id !== match.id}),
+		});     
+	}
+
 	const dateLastMonthShowDate = (flag) => {
 		const notLastMontGames = {
 			notLastMonth: state.matches.filter((items) => {
@@ -62,6 +71,7 @@ const useInitialState = () => {
 
 	return {
 		addToMatch,
+		removeMatch,
 		dateLastMonthShowDate,
 		state,
 	};

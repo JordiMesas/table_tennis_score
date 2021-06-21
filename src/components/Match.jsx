@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState} from 'react';
+
 import purpleRightArrow from '../img/chevron-right-purple.svg';
 import purpleDownArrow from '../img/chevron-down-purple.svg';
 
-const Match = ({ match}) => {
+const Match = ({ match, actionDeleteMatch}) => {
 	const [toggle, setShow] = useState(false);
-
+		
 	return (
 		<div className='match-items'>
 			<div className='match-items-layout'>
@@ -14,9 +15,12 @@ const Match = ({ match}) => {
 					</p>
 					<p> Score: {match.score}</p>
 				</div>
+				<div  onClick={ actionDeleteMatch(match) }>					
+					<i className="fas fa-trash-alt" />
+				</div>
 				<div >
 					<img onClick={() => setShow(!toggle)} src={!toggle ? purpleRightArrow : purpleDownArrow} alt='arrow' />
-				</div>
+				</div>				
 			</div>
 				{toggle && <p className="match-items-styleWinner">The {match.winner} player is the winner</p>}
 			

@@ -14,7 +14,7 @@ import blackDownArrow from '../img/chevron-down-black.svg';
 const Main = () => {
 	const [toggle, setShow] = useState(true);
 	const [allGames, setGames] = useState(true);
-	const { state, dateLastMonthShowDate } = useContext(Appcontext);
+	const { state, dateLastMonthShowDate, removeMatch} = useContext(Appcontext);
 	const { matches } = state;
 	const [search, setSearch] = useState('');
 	//ponemos dentro values de inputs para ser usados
@@ -58,7 +58,11 @@ const Main = () => {
 			}),
 		[matches, search]
 	);
-	
+
+	const actionDeleteMatch = match => () =>{
+		console.log('entra');
+		removeMatch(match);
+	}	
 
 	return (
 		<div className='container'>
@@ -91,9 +95,7 @@ const Main = () => {
 				</nav>
 
 				{toggle
-					? filterPlayers.map((match) => {
-							return <Match key={match.id} match={match} />;
-					  })
+					? filterPlayers.map((match) => (<Match key={match.id} match={match} actionDeleteMatch={actionDeleteMatch}/>	))
 					: null}
 				
 			</div>

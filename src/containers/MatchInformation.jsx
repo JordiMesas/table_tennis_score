@@ -37,32 +37,31 @@ const MatchInformation = () => {
 	return (
 		<div className='container'>
 			<div className='Information-form'>
-				<h5>Registra los datos de un partido</h5>
+				<h5>Record the data of a match</h5>
 				<form ref={form}>
 					<input
-						type='date'
-						placeholder='fecha'
+						type='date'						
 						name='date'
 						max={effectFormValidateDate()}
 					/>
 					<input
 						type='text'
-						placeholder='Nombre de jugador en casa'
+						placeholder='Player name at home'
 						name='playerHome'
 					/>
 					<input
 						type='text'
-						placeholder='Nombre de jugador de fuera'
+						placeholder='Out player name'
 						name='playerOut'
 					/>
-					<input type='text' placeholder='Resultado' name='score' />
-					<input type='text' placeholder='Ganador' name='winner' />
-					<input type='number' placeholder='Numero partido' name='id' />
+					<input type='text' placeholder='Score' name='score' />
+					<input type='text' placeholder='Winner' name='winner' />
+					<input type='number' placeholder='game number' name='id' />
 				</form>
 
 				<div className='Information-next'>
 					<button type='button' onClick={handleSubmit}>
-						Registrar
+						Register
 					</button>
 				</div>
 			</div>
