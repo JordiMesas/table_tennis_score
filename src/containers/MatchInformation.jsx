@@ -1,5 +1,4 @@
 import React, { useContext, useRef } from 'react';
-
 import Appcontext from '../context/AppContext';
 
 const MatchInformation = () => {
@@ -39,9 +38,13 @@ const MatchInformation = () => {
 			<div className='Information-form'>
 				<h5>Record the data of a match</h5>
 				<form ref={form}>
+					<input type='number' placeholder='game number' name='id' />
 					<input
-						type='date'						
-						name='date'
+						type='text'						
+						name='date'						
+						onFocus={e => e.currentTarget.type = "date"}
+						onBlur={e => e.currentTarget.type = "text"}						
+						placeholder="today's date"
 						max={effectFormValidateDate()}
 					/>
 					<input
@@ -56,7 +59,7 @@ const MatchInformation = () => {
 					/>
 					<input type='text' placeholder='Score' name='score' />
 					<input type='text' placeholder='Winner' name='winner' />
-					<input type='number' placeholder='game number' name='id' />
+					
 				</form>
 
 				<div className='Information-next'>
