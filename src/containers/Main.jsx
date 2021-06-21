@@ -7,7 +7,6 @@ import React, {
 } from 'react';
 import Search from '../components/Search';
 import Match from '../components/Match';
-import MatchNotLastMonth from '../components/MatchNotLastMonth';
 import Appcontext from '../context/AppContext';
 import blackRightArrow from '../img/chevron-right-black.svg';
 import blackDownArrow from '../img/chevron-down-black.svg';
@@ -16,16 +15,14 @@ const Main = () => {
 	const [toggle, setShow] = useState(true);
 	const [allGames, setGames] = useState(true);
 	const { state, dateLastMonthShowDate } = useContext(Appcontext);
-	const { matches, matchesNotLastMonth } = state;
+	const { matches } = state;
 	const [search, setSearch] = useState('');
 	//ponemos dentro values de inputs para ser usados
 	const searchInput = useRef(null);
 
 	const handleMatchDate = () => {
-		setGames(!allGames);
-		if (allGames) {
-			dateLastMonthShowDate();
-		}
+		setGames(!allGames);		
+		dateLastMonthShowDate(allGames);		
 	};
 	const showAllGames = () => {
 		setShow(!toggle);
@@ -39,15 +36,29 @@ const Main = () => {
 	);
 
 	//cuando cambie characters o/y cambie search useMemo recordará
-
+		
 	const filterPlayers = useMemo(
 		() =>
-		matches.filter((players) => {
+			matches.filter((players) => {
 				// con includes compara si search (estado actual de input es igual al valor del input user.name)
-				return players.playerHome.toLowerCase().includes(search.toLowerCase());
+				const typePlayers = {
+					homePlayers: players.playerHome
+						.toLowerCase()
+						.includes(search.toLowerCase()),
+					outPlayers: players.playerOut
+						.toLowerCase()
+						.includes(search.toLowerCase()),
+				};
+
+				if (typePlayers.homePlayers) {
+					return typePlayers.homePlayers;
+				} else {
+					return typePlayers.outPlayers;
+				}
 			}),
-		[matches,search]
+		[matches, search]
 	);
+	
 
 	return (
 		<div className='container'>
@@ -84,17 +95,7 @@ const Main = () => {
 							return <Match key={match.id} match={match} />;
 					  })
 					: null}
-
-				{allGames &&
-					toggle &&
-					matchesNotLastMonth.map((matchNotLastMonth) => {
-						return (
-							<MatchNotLastMonth
-								key={matchNotLastMonth.id}
-								matchNotLastMonth={matchNotLastMonth}
-							/>
-						);
-					})}
+				
 			</div>
 		</div>
 	);

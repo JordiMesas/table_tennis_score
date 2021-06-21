@@ -19,8 +19,8 @@ const Header = () => {
 					<Link to='/table_tennis_score'>
 						<i className='fas fa-home' />
 					</Link>
-					<Link to='/Form'>
-						<i className='fas fa-table-tennis' fontSize='40px'/>
+					<Link to='/MatchInformation'>
+						<i className='fas fa-table-tennis'/>
 					</Link>
 				</div>
 			</nav>

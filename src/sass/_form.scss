@@ -1,0 +1,52 @@
+@import './variables.scss';
+@import './mixins';
+
+.Information-form {
+	width: 100%;	
+	display: $flex;
+	flex-direction: column;
+	align-items: center;	
+	border-radius: 5px;
+	background-color: #EEEEEE;
+	padding: 20px;
+	margin-bottom: 10px;
+	h5{
+		padding-bottom: 15px;
+		font-size: 1em;
+	}
+	form {
+		width: 80%;		
+		display: $flex;
+		flex-direction: column;
+		align-items: flex-start;
+		input[type='text'],
+		input[type='number'],
+		input[type='date'] {	
+			width: 100%;
+			font-size: 1em;		
+			padding: 12px 20px;
+			margin: 8px 0;			
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+		}
+	}
+	.Information-next{
+		width: 80%;
+		display: $flex;
+		justify-content: flex-start;
+		button[type='button'] {				
+			background-color: $color-purple;
+			font-size: 0.9em;
+			color: white;
+			padding: 14px 20px;
+			margin: 8px 0;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+		button[type='button']:hover {			
+			background-color: #45a049;			
+		}
+	}
+}

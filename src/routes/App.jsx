@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Layout from '../components/Layout';
 import Main from '../containers/Main';
-import Form from '../containers/Form';
+import MatchInformation from '../containers/MatchInformation';
 
 import NotFound from '../containers/NotFound';
 
@@ -20,7 +20,7 @@ const App = () => {
                     	{/*Encuentra el path y lo empuja según la ruta puesta. Switch es el children que le estamos pasando a components/Layout.jsx*/}
 					<Switch>						
 						<Route exact path='/table_tennis_score' component={Main} />
-						<Route exact path='/Form' component={Form} />						
+						<Route exact path='/MatchInformation' component={MatchInformation} />						
 						<Route component={NotFound} />
 					</Switch>
                 </Layout>

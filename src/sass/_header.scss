@@ -1,45 +1,52 @@
 @import './variables.scss';
 @import './mixins';
-header{
-    background-color: $color-purple;     
-    nav {
-        display: grid;
-        padding: 7.5%  10%;  
-        @media (min-width: 768px) { 
-            padding: 4% 0;
-            grid-template-columns: auto auto;
-        }      
-        color:$color-white;
-        .header-title {
-            display: $flex;
-            flex-direction: $row;
-            justify-content: start;
-            align-items: $center;
-            img {
-                width: 10.5%;
-                margin-left: 8%;
-                @media (min-width: 768px) { 
-                    width: 10%;
-                }              
-            }
-        }
-        .header-name {
-            padding-top: 9px;
-           	
-        }
-        .header-formHome{            
-            margin-top: 10px;            
-            font-size: 1.3em;
-            @media (min-width: 768px) { 
-                display: $flex;
-                justify-content: flex-end;          
-                .fa-home,.fa-table-tennis{
-                    font-size: 1.6em;
-                }                
-            } 
-            .fa-table-tennis{
-                margin-left: 5px;                
-            }
-        }
-    }
+header {
+	background-color: $color-purple;
+	nav {
+		display: grid;
+		padding: 7.5% 10%;
+		@media (min-width: 768px) {
+			padding: 4% 0;
+			grid-template-columns: auto auto;
+		}
+		color: $color-white;
+		.header-title {
+			display: $flex;
+			flex-direction: $row;
+			justify-content: start;
+			align-items: $center;
+			img {
+				width: 10.5%;
+				margin-left: 8%;
+				@media (min-width: 768px) {
+					width: 10%;
+				}
+			}
+		}
+		.header-name {
+			padding-top: 9px;
+		}
+		.header-formHome {
+			margin-top: 10px;
+			font-size: 1.3em;
+			@media (min-width: 768px) {
+				display: $flex;
+				justify-content: flex-end;
+			}
+			.fa-home,
+			.fa-table-tennis {
+				color: $color-white;
+				@media (min-width: 768px) {
+					font-size: 1.6em;
+				}
+				&:hover {
+					color: #d1c9e7;
+				}
+			}
+
+			.fa-table-tennis {
+				margin-left: 5px;
+			}
+		}
+	}
 }

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import purpleRightArrow from '../img/chevron-right-purple.svg';
 import purpleDownArrow from '../img/chevron-down-purple.svg';
 
-const Match = ({ match }) => {
+const Match = ({ match}) => {
 	const [toggle, setShow] = useState(false);
 
 	return (
