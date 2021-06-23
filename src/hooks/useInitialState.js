@@ -5,33 +5,39 @@ import initialState from '../initialState.json';
 const useInitialState = () => {
 	const [state, setState] = useState(initialState);
 
-	const addToMatch = (match) => {
-
-        for (let i = 0; i < state.matches.length; i++) {
-            console.log(state.matches[i].id);
-            console.log(state.matches[i].id);
-            if (state.matches[i].id === parseInt(match.id)) {
-                console.log('el numero de partido tiene que ser unico');
-                break;			    
-			}else{
-                setState({
-                    ...state,
-                    matches: [...state.matches, match],
-                });                
-            }
-            
-        }	
-		
+	const addToMatch = (match) => {		
+		console.log(state.matches);
+		console.log(parseInt(match.id));
+		if (
+			state.matches.filter((items) => {
+				return items.id === match.id;
+			}).length === 0
+		) {
+			setState({
+				...state,
+				matches: [...state.matches, match],
+			});
+			return true;
+		} else {			
+			console.log('el numero de partido tiene que ser unico');
+			return false;
+		}
 	};
 
-	const removeMatch = (match)=>{
+	const removeMatch = (match) => {
 		console.log(match);
-		console.log(state.matches.filter((items)=>{return items.id !== match.id}));
+		console.log(
+			state.matches.filter((items) => {
+				return items.id !== match.id;
+			})
+		);
 		setState({
 			...state,
-			matches: state.matches.filter((items)=>{return items.id !== match.id}),
-		});     
-	}
+			matches: state.matches.filter((items) => {
+				return items.id !== match.id;
+			}),
+		});
+	};
 
 	const dateLastMonthShowDate = (flag) => {
 		const notLastMontGames = {

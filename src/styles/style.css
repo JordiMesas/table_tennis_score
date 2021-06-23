@@ -225,7 +225,7 @@ main .score .match-items .match-items-styleWinner {
   justify-content: flex-start;
 }
 .Information-form .Information-next button[type=button] {
-  background-color: #8d7cc2;
+  background-color: #a197c0;
   font-size: 0.9em;
   color: white;
   padding: 14px 20px;
@@ -235,7 +235,13 @@ main .score .match-items .match-items-styleWinner {
   cursor: pointer;
 }
 .Information-form .Information-next button[type=button]:hover {
-  background-color: #45a049;
+  background-color: #8d7cc2;
+}
+.Information-form .validate-alert {
+  color: red;
+}
+.Information-form .validate-success {
+  color: green;
 }
 
 /*# sourceMappingURL=style.css.map */

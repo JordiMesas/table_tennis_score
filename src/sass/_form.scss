@@ -37,7 +37,7 @@
 		display: $flex;
 		justify-content: flex-start;
 		button[type='button'] {				
-			background-color: $color-purple;
+			background-color: #a197c0;
 			font-size: 0.9em;
 			color: white;
 			padding: 14px 20px;
@@ -47,7 +47,14 @@
 			cursor: pointer;
 		}
 		button[type='button']:hover {			
-			background-color: #45a049;			
+			background-color: $color-purple;			
 		}
 	}
+	.validate-alert{
+		color: red;
+	}
+	.validate-success{
+		color: green;
+	}
+
 }
