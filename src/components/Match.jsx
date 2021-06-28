@@ -3,6 +3,8 @@ import React, { useState} from 'react';
 import purpleRightArrow from '../img/chevron-right-purple.svg';
 import purpleDownArrow from '../img/chevron-down-purple.svg';
 
+import ModalUpdateMatch from './ModalUpdateMatch';
+
 const Match = ({ match, actionDeleteMatch}) => {
 	const [toggle, setShow] = useState(false);
 		
@@ -14,7 +16,8 @@ const Match = ({ match, actionDeleteMatch}) => {
 						Players: {match.playerHome} vs {match.playerOut}
 					</p>
 					<p> Score: {match.score}</p>
-				</div>
+				</div>				
+				<ModalUpdateMatch />				
 				<div  onClick={ actionDeleteMatch(match) }>					
 					<i className="fas fa-trash-alt" />
 				</div>

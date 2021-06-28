@@ -59,8 +59,7 @@ const Main = () => {
 		[matches, search]
 	);
 
-	const actionDeleteMatch = match => () =>{
-		console.log('entra');
+	const actionDeleteMatch = match => () =>{		
 		removeMatch(match);
 	}	
 
