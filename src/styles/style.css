@@ -72,6 +72,9 @@ header nav .header-formHome {
   margin-top: 10px;
   font-size: 1.3em;
 }
+header nav .header-formHome a {
+  height: 8vh;
+}
 @media (min-width: 768px) {
   header nav .header-formHome {
     display: flex;
@@ -178,9 +181,14 @@ main .score .match-items .match-items-layout div:last-of-type img {
   width: 15px;
   cursor: pointer;
 }
+main .score .match-items .match-items-layout div:nth-of-type(2) {
+  color: green;
+}
 main .score .match-items .match-items-layout div:nth-of-type(3) {
-  cursor: pointer;
   color: red;
+}
+main .score .match-items .match-items-layout div:nth-of-type(2) > div, main .score .match-items .match-items-layout div:nth-of-type(3) {
+  cursor: pointer;
 }
 main .score .match-items .match-items-styleWinner {
   width: 80%;

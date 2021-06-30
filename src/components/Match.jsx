@@ -7,7 +7,7 @@ import ModalUpdateMatch from './ModalUpdateMatch';
 
 const Match = ({ match, actionDeleteMatch}) => {
 	const [toggle, setShow] = useState(false);
-		
+	
 	return (
 		<div className='match-items'>
 			<div className='match-items-layout'>
@@ -17,7 +17,7 @@ const Match = ({ match, actionDeleteMatch}) => {
 					</p>
 					<p> Score: {match.score}</p>
 				</div>				
-				<ModalUpdateMatch />				
+				<ModalUpdateMatch match={match}/>				
 				<div  onClick={ actionDeleteMatch(match) }>					
 					<i className="fas fa-trash-alt" />
 				</div>

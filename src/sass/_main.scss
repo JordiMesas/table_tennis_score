@@ -77,9 +77,14 @@ main {
 						cursor: $pointer;
 					}
 				}
-				div:nth-of-type(3) {
-					cursor: $pointer;
+				div:nth-of-type(2){
+					color: green;
+				}
+				div:nth-of-type(3) {					
 					color: red;
+				}
+				div:nth-of-type(2) > div, div:nth-of-type(3){
+					cursor: $pointer;
 				}
 			}
 			.match-items-styleWinner {

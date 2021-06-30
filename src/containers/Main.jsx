@@ -36,7 +36,8 @@ const Main = () => {
 	);
 
 	//cuando cambie characters o/y cambie search useMemo recordará
-		
+	console.log(matches);
+	console.log(state);
 	const filterPlayers = useMemo(
 		() =>
 			matches.filter((players) => {
