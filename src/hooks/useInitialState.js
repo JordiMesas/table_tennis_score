@@ -17,11 +17,12 @@ const useInitialState = () => {
 				...state,
 				matches: [...state.matches, match],
 			});
+			resetForm();
 			return true;
 		} else {
 			console.log('el numero de partido tiene que ser unico');
 			return false;
-		}
+		}		
 	};
 
 	const updateMatch = (player) => {				
@@ -38,8 +39,11 @@ const useInitialState = () => {
 		setState({			
 			matches: state.matches,
 		});
+		resetForm();
 		return true;
 	};
+
+	const resetForm = () => document.getElementsByTagName('form')[0].reset();
 
 	const validateFields = () => {
 		const field = document.querySelectorAll('form > input');
