@@ -31,7 +31,7 @@ const ModalUpdateMatch = ({ match }) => {
 			: setState((state = false));
 		console.log(state);
 		state
-			? setvalidateSuccess((validateSuccess = true))
+			? setvalidateSuccess((validateSuccess = true) && toggle())
 			: setvalidateSuccess((validateSuccess = false));
 	};
 

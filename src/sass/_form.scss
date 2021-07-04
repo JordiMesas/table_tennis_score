@@ -9,7 +9,7 @@
 	border-radius: 5px;
 	background-color: #EEEEEE;
 	padding: 20px;
-	margin-bottom: 10px;
+	margin: 10px 0;
 	h5{
 		padding-bottom: 15px;
 		font-size: 1em;
@@ -50,11 +50,12 @@
 			background-color: $color-purple;			
 		}
 	}
-	.validate-alert{
-		color: red;
-	}
-	.validate-success{
-		color: green;
-	}
+	
 
+}
+.validate-alert{
+	color: red;
+}
+.validate-successfully{
+	color: green;
 }

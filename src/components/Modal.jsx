@@ -5,7 +5,7 @@ import Form from './Form';
 const Modal = ({
 	isShowing,
 	hide,
-  handleSubmit,
+	handleSubmit,
 	effectFormValidateDate,
 	scoreForm,
 	match,
@@ -35,26 +35,27 @@ const Modal = ({
 									<span aria-hidden='true'>&times;</span>
 								</button>
 							</div>
-							<Form
-                handleSubmit={handleSubmit}
-								effectFormValidateDate={effectFormValidateDate}
-								scoreForm={scoreForm}
-								match={match}
-								stateButton={true}
-							/>
+							<div className='Information-form'>
+								<h5>Update the matches</h5>
+								<Form
+									handleSubmit={handleSubmit}
+									effectFormValidateDate={effectFormValidateDate}
+									scoreForm={scoreForm}
+									match={match}
+									stateButton={true}
+								/>
+							</div>
 							{!state ? (
 								<small className='validate-alert'>
 									Fill in the fields marked in red on the form!
 								</small>
 							) : null}
 
-							{
-								validateSuccess && (
-									<small className='validate-successfully'>
-										Updated successfully!
-									</small>
-								)
-							}
+							{validateSuccess && (
+								<small className='validate-successfully'>
+									Updated successfully!
+								</small>
+							)}
 						</div>
 					</div>
 				</React.Fragment>,
