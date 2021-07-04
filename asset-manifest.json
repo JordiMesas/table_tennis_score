@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/table_tennis_score/static/css/main.884c66fe.chunk.css",
-    "main.js": "/table_tennis_score/static/js/main.206094ca.chunk.js",
-    "main.js.map": "/table_tennis_score/static/js/main.206094ca.chunk.js.map",
+    "main.css": "/table_tennis_score/static/css/main.8c2257d9.chunk.css",
+    "main.js": "/table_tennis_score/static/js/main.fbea9a48.chunk.js",
+    "main.js.map": "/table_tennis_score/static/js/main.fbea9a48.chunk.js.map",
     "runtime-main.js": "/table_tennis_score/static/js/runtime-main.3651717d.js",
     "runtime-main.js.map": "/table_tennis_score/static/js/runtime-main.3651717d.js.map",
     "static/js/2.000fb0a2.chunk.js": "/table_tennis_score/static/js/2.000fb0a2.chunk.js",
     "static/js/2.000fb0a2.chunk.js.map": "/table_tennis_score/static/js/2.000fb0a2.chunk.js.map",
     "index.html": "/table_tennis_score/index.html",
-    "static/css/main.884c66fe.chunk.css.map": "/table_tennis_score/static/css/main.884c66fe.chunk.css.map",
+    "static/css/main.8c2257d9.chunk.css.map": "/table_tennis_score/static/css/main.8c2257d9.chunk.css.map",
     "static/js/2.000fb0a2.chunk.js.LICENSE.txt": "/table_tennis_score/static/js/2.000fb0a2.chunk.js.LICENSE.txt",
     "static/media/chevron-down-black.a815d3cb.svg": "/table_tennis_score/static/media/chevron-down-black.a815d3cb.svg",
     "static/media/chevron-down-purple.f6902967.svg": "/table_tennis_score/static/media/chevron-down-purple.f6902967.svg",
@@ -19,7 +19,7 @@
   "entrypoints": [
     "static/js/runtime-main.3651717d.js",
     "static/js/2.000fb0a2.chunk.js",
-    "static/css/main.884c66fe.chunk.css",
-    "static/js/main.206094ca.chunk.js"
+    "static/css/main.8c2257d9.chunk.css",
+    "static/js/main.fbea9a48.chunk.js"
   ]
 }
