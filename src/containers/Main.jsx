@@ -8,13 +8,16 @@ import React, {
 import Search from '../components/Search';
 import Match from '../components/Match';
 import Appcontext from '../context/AppContext';
-import blackRightArrow from '../img/chevron-right-black.svg';
+
+import {SlideDown} from 'react-slidedown';
+import '../styles/slidedown.css';
+
 import blackDownArrow from '../img/chevron-down-black.svg';
 
 const Main = () => {
 	const [toggle, setShow] = useState(true);
 	const [allGames, setGames] = useState(true);
-	const { state, dateLastMonthShowDate, removeMatch} = useContext(Appcontext);
+	const { state, dateLastMonthShowDate, removeMatch, animateArrow} = useContext(Appcontext);
 	const { matches } = state;
 	const [search, setSearch] = useState('');
 	//ponemos dentro values de inputs para ser usados
@@ -26,6 +29,9 @@ const Main = () => {
 	};
 	const showAllGames = () => {
 		setShow(!toggle);
+		//Pasamos como parametro la variable boleana de tipo useState y la variable de tipo de arrow
+		const arrowNav = document.getElementsByClassName('score-allGames-animate')[0];
+		animateArrow(toggle,arrowNav);		  		
 	};
 	const handleSearch = useCallback(
 		() => {
@@ -73,7 +79,7 @@ const Main = () => {
 						type='button'
 						onClick={handleMatchDate}
 					>
-						Last Month
+						last month
 					</button>
 
 					<Search
@@ -84,19 +90,22 @@ const Main = () => {
 
 					<ul className='score-allGames'>
 						<li>all the games</li>
-						<li className='score-allGames-animate' onClick={showAllGames}>
-							{' '}
+						<li className='score-allGames-animate' onClick={showAllGames}>							
+														
 							<img
-								src={!toggle ? blackRightArrow : blackDownArrow}
+								src= {blackDownArrow}
 								alt='arrow'
-							/>{' '}
+							/>
+							
 						</li>
 					</ul>
 				</nav>
-
-				{toggle
-					? filterPlayers.map((match) => (<Match key={match.id} match={match} actionDeleteMatch={actionDeleteMatch}/>	))
-					: null}
+				
+				<SlideDown>
+					{toggle
+						? filterPlayers.map((match) => (<Match key={match.id} match={match} SlideDown={SlideDown} actionDeleteMatch={actionDeleteMatch} animateArrow={animateArrow}/>	))
+						:  null}
+				</SlideDown>
 				
 			</div>
 		</div>

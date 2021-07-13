@@ -125,6 +125,25 @@ const useInitialState = () => {
 		}
 	};
 
+	const animateArrow = (toggle, arrow, arrowBolean=true)=>{
+		
+		arrow.style.transition ='200ms ease-in-out all';
+		if(arrowBolean){
+			if(!toggle){			
+				arrow.style.transform = 'rotate(0)';
+			}else{			
+				arrow.style.transform = 'rotate(-90deg)';
+			}
+		}else{
+			if(!toggle){			
+				arrow.style.transform = 'rotate(90deg)';
+			}else{			
+				arrow.style.transform = 'rotate(0)';
+			}
+		}
+		
+	}
+
 	return {
 		addToMatch,
 		updateMatch,
@@ -132,6 +151,7 @@ const useInitialState = () => {
 		effectFormValidateDate,
 		removeMatch,
 		dateLastMonthShowDate,
+		animateArrow,
 		state,
 	};
 };

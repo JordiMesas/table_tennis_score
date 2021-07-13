@@ -15,6 +15,8 @@ main {
 			padding: 3%;
 			background-color: #eeeeee;
 			border-radius: $border-radius;
+			border: 0.1px solid grayscale($color: #bdbac7a9);
+
 			@include modelFlexRow;
 			.score-allGames {
 				display: $flex;
@@ -31,6 +33,7 @@ main {
 			button {
 				padding: 8px;
 				font-weight: bold;
+				font-size: 0.94em;
 				border-radius: $border-radius;
 				cursor: $pointer;
 				border: 1px solid #9f8bdb;
@@ -41,29 +44,45 @@ main {
 				flex-wrap: wrap;
 				input {
 					width: 100%;
-					margin-top: 2px;
+					margin-top: 4px;
 					padding: 6px;
 					border: 1px solid #ccc;
 					border-radius: 4px;
 				}
 			}
 		}
+		.match-items:first-of-type {
+			margin-top: 3%;
+			.match-items-layout {
+				border-radius: 5px 5px 0 0;
+			}
+		}
+		.match-items:last-of-type {
+			margin-bottom: 3%;
+			.match-items-layout {
+				border-radius: 0 0 5px 5px;
+			}
+		}
 		.match-items {
-			margin: 5% 0;
 			color: #4c28b9;
 			.match-items-layout {
 				padding: 3%;
 				background-color: #b7abdaa4;
-				width: 90%;
 				display: grid;
 				justify-content: center;
 				align-content: center;
-				grid-template-columns: 55% 10% 10% 12%;
-				border-radius: $border-radius;
+				grid-template-columns: 55% 15% 12% 14%;
+				border: 0.5px solid grayscale($color: #8d7cc2);
 
 				div:first-of-type {
 					p {
-						padding: 5px 0;
+						padding: 10px 0;
+						&:last-of-type {
+							border-top: 0.1px solid grayscale($color: #8d7cc2);
+							@media (min-width: 425px) {
+								border-top: none;
+							}
+						}
 					}
 				}
 				div:nth-of-type(2),
@@ -73,28 +92,31 @@ main {
 					justify-self: flex-end;
 					width: 20px;
 					img {
-						width: 15px;
+						width: 11px;
+						@media (min-width: 768px) {
+							width: 16px;
+						}
 						cursor: $pointer;
 					}
 				}
-				div:nth-of-type(2){
+				div:nth-of-type(2) {
 					color: green;
 				}
-				div:nth-of-type(3) {					
+				div:nth-of-type(3) {
 					color: red;
 				}
-				div:nth-of-type(2), div:nth-of-type(3){
+				div:nth-of-type(2),
+				div:nth-of-type(3) {
 					cursor: $pointer;
 				}
 			}
 			.match-items-styleWinner {
-				width: 80%;
 				padding: 4.5%;
-				margin-top: 1%;
 				display: $flex;
 				justify-content: $center;
 				background-color: rgba(255, 255, 0, 0.589);
-				border-radius: $border-radius;
+				border-right: 0.5px solid grayscale($color: #8d7cc2);
+				border-left: 0.5px solid grayscale($color: #8d7cc2);
 			}
 		}
 	}

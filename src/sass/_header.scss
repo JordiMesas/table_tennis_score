@@ -4,7 +4,8 @@ header {
 	background-color: $color-purple;
 	nav {
 		display: grid;
-		padding: 7.5% 10%;
+		padding: 7.5% 0;
+		grid-template-columns: auto auto;
 		@media (min-width: 768px) {
 			padding: 4% 0;
 			grid-template-columns: auto auto;
@@ -26,14 +27,13 @@ header {
 		.header-name {
 			padding-top: 9px;
 		}
-		.header-formHome {
+		.header-formHome {			
 			margin-top: 10px;
-			font-size: 1.3em;
-			a{
-				height: 8vh;
-			}
+			font-size: 1.3em;			
+			display: $flex;
+			flex-direction: $column;			
 			@media (min-width: 768px) {
-				display: $flex;
+				flex-direction: $row;				
 				justify-content: flex-end;
 			}
 			.fa-home,

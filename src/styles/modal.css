@@ -46,6 +46,10 @@
     cursor: pointer;
     border: none;
   }
+
+  .modal-close-button:hover{
+    opacity: inherit;
+  }
   
   button {
     font-size: .9rem;

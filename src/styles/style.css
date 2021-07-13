@@ -26,11 +26,12 @@ body .container h1 {
   font-family: "Bree Serif", serif;
   font-size: 1.5em;
 }
-body .container p {
+body .container p, body .container li {
   font-weight: bold;
 }
 body .container li {
   list-style: none;
+  font-size: 0.83em;
 }
 body .container img {
   max-width: 100%;
@@ -41,7 +42,8 @@ header {
 }
 header nav {
   display: grid;
-  padding: 7.5% 10%;
+  padding: 7.5% 0;
+  grid-template-columns: auto auto;
   color: white;
 }
 @media (min-width: 768px) {
@@ -71,13 +73,12 @@ header nav .header-name {
 header nav .header-formHome {
   margin-top: 10px;
   font-size: 1.3em;
-}
-header nav .header-formHome a {
-  height: 8vh;
+  display: flex;
+  flex-direction: column;
 }
 @media (min-width: 768px) {
   header nav .header-formHome {
-    display: flex;
+    flex-direction: row;
     justify-content: flex-end;
   }
 }
@@ -115,6 +116,7 @@ main .score nav {
   padding: 3%;
   background-color: #eeeeee;
   border-radius: 5px;
+  border: 0.1px solid rgba(193, 193, 193, 0.662745098);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -135,6 +137,7 @@ main .score nav .score-allGames {
 main .score nav button {
   padding: 8px;
   font-weight: bold;
+  font-size: 0.94em;
   border-radius: 5px;
   cursor: pointer;
   border: 1px solid #9f8bdb;
@@ -146,27 +149,45 @@ main .score nav .score-search {
 }
 main .score nav .score-search input {
   width: 100%;
-  margin-top: 2px;
+  margin-top: 4px;
   padding: 6px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+main .score .match-items:first-of-type {
+  margin-top: 3%;
+}
+main .score .match-items:first-of-type .match-items-layout {
+  border-radius: 5px 5px 0 0;
+}
+main .score .match-items:last-of-type {
+  margin-bottom: 3%;
+}
+main .score .match-items:last-of-type .match-items-layout {
+  border-radius: 0 0 5px 5px;
+}
 main .score .match-items {
-  margin: 5% 0;
   color: #4c28b9;
 }
 main .score .match-items .match-items-layout {
   padding: 3%;
   background-color: #b7abdaa4;
-  width: 90%;
   display: grid;
   justify-content: center;
   align-content: center;
-  grid-template-columns: 55% 10% 10% 12%;
-  border-radius: 5px;
+  grid-template-columns: 55% 15% 12% 14%;
+  border: 0.5px solid #9f9f9f;
 }
 main .score .match-items .match-items-layout div:first-of-type p {
-  padding: 5px 0;
+  padding: 10px 0;
+}
+main .score .match-items .match-items-layout div:first-of-type p:last-of-type {
+  border-top: 0.1px solid #9f9f9f;
+}
+@media (min-width: 425px) {
+  main .score .match-items .match-items-layout div:first-of-type p:last-of-type {
+    border-top: none;
+  }
 }
 main .score .match-items .match-items-layout div:nth-of-type(2),
 main .score .match-items .match-items-layout div:nth-of-type(3),
@@ -178,8 +199,15 @@ main .score .match-items .match-items-layout div:last-of-type {
 main .score .match-items .match-items-layout div:nth-of-type(2) img,
 main .score .match-items .match-items-layout div:nth-of-type(3) img,
 main .score .match-items .match-items-layout div:last-of-type img {
-  width: 15px;
+  width: 11px;
   cursor: pointer;
+}
+@media (min-width: 768px) {
+  main .score .match-items .match-items-layout div:nth-of-type(2) img,
+main .score .match-items .match-items-layout div:nth-of-type(3) img,
+main .score .match-items .match-items-layout div:last-of-type img {
+    width: 16px;
+  }
 }
 main .score .match-items .match-items-layout div:nth-of-type(2) {
   color: green;
@@ -187,17 +215,17 @@ main .score .match-items .match-items-layout div:nth-of-type(2) {
 main .score .match-items .match-items-layout div:nth-of-type(3) {
   color: red;
 }
-main .score .match-items .match-items-layout div:nth-of-type(2), main .score .match-items .match-items-layout div:nth-of-type(3) {
+main .score .match-items .match-items-layout div:nth-of-type(2),
+main .score .match-items .match-items-layout div:nth-of-type(3) {
   cursor: pointer;
 }
 main .score .match-items .match-items-styleWinner {
-  width: 80%;
   padding: 4.5%;
-  margin-top: 1%;
   display: flex;
   justify-content: center;
   background-color: rgba(255, 255, 0, 0.589);
-  border-radius: 5px;
+  border-right: 0.5px solid #9f9f9f;
+  border-left: 0.5px solid #9f9f9f;
 }
 
 .Information-form {

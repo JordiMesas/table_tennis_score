@@ -27,12 +27,13 @@ body{
             font-family: 'Bree Serif', serif;
             font-size: $title-size;                
         }
-        p{
+        p,li{
             font-weight: $bold;              
         }
         
         li{
-            list-style: none;        
+            list-style: none;  
+            font-size: 0.83em;      
         }
        
         img{        
