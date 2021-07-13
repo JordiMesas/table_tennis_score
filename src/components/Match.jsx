@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
+import {SlideDown} from 'react-slidedown';
 
 import purpleRightArrow from '../img/chevron-right-purple.svg';
 
 import ModalUpdateMatch from './ModalUpdateMatch';
 
-const Match = ({ match, actionDeleteMatch, SlideDown, animateArrow }) => {
+const Match = ({ match, actionDeleteMatch, animateArrow }) => {
 	const [toggle, setShow] = useState(false);
 	
 	const winnerPlayer = (e) =>{

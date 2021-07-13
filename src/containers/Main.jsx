@@ -9,7 +9,6 @@ import Search from '../components/Search';
 import Match from '../components/Match';
 import Appcontext from '../context/AppContext';
 
-import {SlideDown} from 'react-slidedown';
 import '../styles/slidedown.css';
 
 import blackDownArrow from '../img/chevron-down-black.svg';
@@ -101,11 +100,11 @@ const Main = () => {
 					</ul>
 				</nav>
 				
-				<SlideDown>
+				
 					{toggle
-						? filterPlayers.map((match) => (<Match key={match.id} match={match} SlideDown={SlideDown} actionDeleteMatch={actionDeleteMatch} animateArrow={animateArrow}/>	))
+						? filterPlayers.map((match) => (<Match key={match.id} match={match} actionDeleteMatch={actionDeleteMatch} animateArrow={animateArrow}/>	))
 						:  null}
-				</SlideDown>
+				
 				
 			</div>
 		</div>
