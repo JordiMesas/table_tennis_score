@@ -140,10 +140,10 @@ const useInitialState = () => {
 				arrow.style.transform = turnArrow.turnNegativePosition;
 			}
 		}else{
-			if(!toggle){			
-				arrow.style.transform = turnArrow.turnPositivePosition;
+			if(toggle){
+				arrow.style.transform = turnArrow.initialPosition;				
 			}else{			
-				arrow.style.transform = turnArrow.initialPosition;
+				arrow.style.transform = turnArrow.turnPositivePosition;
 			}
 		}
 		
