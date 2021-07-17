@@ -124,6 +124,8 @@ main .score nav {
 }
 main .score nav .score-allGames {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 main .score nav .score-allGames .score-allGames-animate {
   margin-left: 10px;
@@ -155,7 +157,7 @@ main .score nav .score-search input {
   border-radius: 4px;
 }
 main .score .match-items:first-of-type {
-  margin-top: 3%;
+  margin-top: 19px;
 }
 main .score .match-items:first-of-type .match-items-layout {
   border-radius: 5px 5px 0 0;

@@ -20,6 +20,8 @@ main {
 			@include modelFlexRow;
 			.score-allGames {
 				display: $flex;
+				align-items: $center;
+    			justify-content: $center;
 				.score-allGames-animate {
 					margin-left: 10px;
 					width: 18px;
@@ -52,7 +54,7 @@ main {
 			}
 		}
 		.match-items:first-of-type {
-			margin-top: 3%;
+			margin-top: 19px;
 			.match-items-layout {
 				border-radius: 5px 5px 0 0;
 			}
