@@ -29,9 +29,9 @@ const Match = ({ match, actionDeleteMatch, animateArrow }) => {
 				</div>
 				<div
 					className='score-player-animate'
-					onClick={winnerPlayer}
+					
 				>
-					<img src={purpleRightArrow} alt='arrow' />
+					<img src={purpleRightArrow} alt='arrow' onClick={winnerPlayer}/>
 				</div>
 			</div>
 			<SlideDown>

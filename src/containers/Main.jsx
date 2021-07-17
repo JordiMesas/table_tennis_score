@@ -30,7 +30,7 @@ const Main = () => {
 		setShow(!toggle);
 		//Pasamos como parametro la variable boleana de tipo useState y la variable de tipo de arrow
 		const arrowNav = document.getElementsByClassName('score-allGames-animate')[0];
-		animateArrow(toggle,arrowNav);		  		
+		animateArrow(toggle,arrowNav, true);		  		
 	};
 	const handleSearch = useCallback(
 		() => {
@@ -89,11 +89,12 @@ const Main = () => {
 
 					<ul className='score-allGames'>
 						<li>all the games</li>
-						<li className='score-allGames-animate' onClick={showAllGames}>							
+						<li className='score-allGames-animate'>							
 														
 							<img
 								src= {blackDownArrow}
 								alt='arrow'
+								onClick={showAllGames}
 							/>
 							
 						</li>

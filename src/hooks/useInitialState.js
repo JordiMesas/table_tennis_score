@@ -125,20 +125,25 @@ const useInitialState = () => {
 		}
 	};
 
-	const animateArrow = (toggle, arrow, arrowBolean=true)=>{
+	const animateArrow = (toggle, arrow, arrowBolean)=>{
 		
 		arrow.style.transition ='200ms ease-in-out all';
-		if(arrowBolean){
+		const turnArrow = {
+			initialPosition:'rotate(0)',
+			turnPositivePosition: 'rotate(90deg)',
+			turnNegativePosition: 'rotate(-90deg)',
+		}
+		if(arrowBolean){			
 			if(!toggle){			
-				arrow.style.transform = 'rotate(0)';
+				arrow.style.transform = turnArrow.initialPosition;
 			}else{			
-				arrow.style.transform = 'rotate(-90deg)';
+				arrow.style.transform = turnArrow.turnNegativePosition;
 			}
 		}else{
 			if(!toggle){			
-				arrow.style.transform = 'rotate(90deg)';
+				arrow.style.transform = turnArrow.turnPositivePosition;
 			}else{			
-				arrow.style.transform = 'rotate(0)';
+				arrow.style.transform = turnArrow.initialPosition;
 			}
 		}
 		
