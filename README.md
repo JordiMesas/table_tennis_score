@@ -1,11 +1,29 @@
 # Historial de partidos de tenis de mesa 
 
-### Representación de como registrar, actualizar, mostrar, y eliminar mediante editar un json llamado "initialState" que viene por defecto con datos dentro de partidos de tenis de mesa hecho por jugadores
+### Representación de como registrar, actualizar, mostrar, y eliminar mediante editar un json llamado "initialState" que viene por defecto con datos de partidos de tenis de mesa 
 
-Explicación breve: 
+**Explicación breve:** 
 
-- Pagina de inicio 
-    - 
+En el Header: a la derecha del titulo "Ping Pong Score by Jordi Mesas del Rio" hay dos links el sitio web de inicio donde aparece el historial de información de partidos jugados y el sitio web para registrar partidos.  
+
+- :house: **_Pagina de inicio_**:
+
+    - **Nav**:
+    
+        - Botón de filtro "last month", si se presiona muestra solo los partidos que se han jugado en el mes actual que estamos.
+        - Input de filtro "player name", si se escribe dentro del input el nombre de cualquier jugador que este registrado en el json se va a filtrar los partidos por nombre.
+        - Arrow, para desplegar los registros.
+        
+    - **Accordion**
+    
+        - Arrow, despliegue del jugador que ha ganado el partido.
+        - Bontón de actualizar verde, si se le clica enzima sale un modal con un formulario con validaciones para poder actualizar la información del partido.
+        - Botón rojo para eliminar el registro.
+- 🏓 **_Pagina para registrar partidos_**
+
+    - **Form**
+    
+        - Formulario (con validaciones, el numero de partidos tiene que ser unico, cada partido tiene su numero identificativo) que si rellenamos todos los campos nos aparece un           mensaje diciendo que hemos registrado un partido satisfactoriamente, esta información nueva que hemos registrado nos aparecerá en la pagina de inicio.
 
 
 
