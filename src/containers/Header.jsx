@@ -1,4 +1,5 @@
 import React from 'react';
+// enlaces a otra pagina
 import { Link } from 'react-router-dom';
 import trophy from '../img/trophy.svg';
 
@@ -15,7 +16,7 @@ const Header = () => {
 						<p>by Jordi Mesas del Rio</p>
 					</div>
 				</div>
-				<div className='header-formHome'>
+				<div className='header-formHome'>					
 					<Link to='/table_tennis_score'>
 						<i className='fas fa-home' />
 					</Link>

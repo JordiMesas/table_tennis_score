@@ -1,3 +1,4 @@
+// Componente que va a parar toda información de los forms de las páginas
 import React, { useContext, useRef, useState } from 'react';
 import Appcontext from '../context/AppContext';
 

@@ -8,6 +8,10 @@ main {
 	.score {
 		padding-top: 10px;
 		font-size: 0.9em;
+		h2{
+			margin-bottom: 18px;
+			color: #9678e2;
+		}
 		nav {
 			display: $flex;
 			justify-content: space-between;

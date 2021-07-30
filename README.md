@@ -1,3 +1,15 @@
+# Historial de partidos de tenis de mesa 
+
+### Representación de como registrar, actualizar, mostrar, y eliminar mediante editar un json llamado "initialState" que viene por defecto con datos dentro de partidos de tenis de mesa hecho por jugadores
+
+Explicación breve: 
+
+- Pagina de inicio 
+    - 
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

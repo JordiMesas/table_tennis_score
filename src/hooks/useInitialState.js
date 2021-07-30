@@ -3,8 +3,10 @@ import { useState } from 'react';
 import initialState from '../initialState.json';
 
 const useInitialState = () => {
+	// ciclo de vida de json
 	const [state, setState] = useState(initialState);
 
+	// registro de info de partidos
 	const addToMatch = (match) => {
 		console.log(state.matches);
 		console.log(parseInt(match.id));
@@ -25,6 +27,7 @@ const useInitialState = () => {
 		}		
 	};
 
+	// actualización de datos de los partidos 
 	const updateMatch = (player) => {				
 		state.matches.map((match)=>{
 			if (match.id === player.id) {
@@ -43,8 +46,10 @@ const useInitialState = () => {
 		return true;
 	};
 
+	//resetea el form de la pagina de registro de partidos
 	const resetForm = () => document.getElementsByTagName('form')[0].reset();
 
+	// validaciones del form de la pagina de registro de partidos
 	const validateFields = () => {
 		const field = document.querySelectorAll('form > input');
 		let validateEmpty = [];
@@ -59,6 +64,7 @@ const useInitialState = () => {
 		return validateEmpty;
 	};
 
+	// funcion que sirve para que los inputs de tipo date no se puedan pulsar los dias posteriores a la fecha actual
 	const effectFormValidateDate = () => {
 		let today = new Date();
 		let dd = today.getDate();
@@ -74,6 +80,7 @@ const useInitialState = () => {
 		return today;
 	};
 
+	// elimina el registro de un partido de la pagina de inicio
 	const removeMatch = (match) => {
 		console.log(match);
 		console.log(
@@ -89,6 +96,7 @@ const useInitialState = () => {
 		});
 	};
 
+	// filtro de solo aparecer los registros de los partidos de la pagina de inicio del mes actual que estamos
 	const dateLastMonthShowDate = (flag) => {
 		const notLastMontGames = {
 			notLastMonth: state.matches.filter((items) => {
@@ -125,6 +133,7 @@ const useInitialState = () => {
 		}
 	};
 
+	// Animación de arrows según el tipo de arrow de la pagina de inicio
 	const animateArrow = (toggle, arrow, arrowBolean)=>{
 		
 		arrow.style.transition ='200ms ease-in-out all';

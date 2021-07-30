@@ -22,7 +22,7 @@ body .container {
     padding: 0 15%;
   }
 }
-body .container h1 {
+body .container h1, body .container h2 {
   font-family: "Bree Serif", serif;
   font-size: 1.5em;
 }
@@ -108,6 +108,10 @@ main {
 main .score {
   padding-top: 10px;
   font-size: 0.9em;
+}
+main .score h2 {
+  margin-bottom: 18px;
+  color: #9678e2;
 }
 main .score nav {
   display: flex;

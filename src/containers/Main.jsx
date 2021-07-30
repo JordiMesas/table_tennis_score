@@ -5,6 +5,7 @@ import React, {
 	useRef,
 	useCallback,
 } from 'react';
+
 import Search from '../components/Search';
 import Match from '../components/Match';
 import Appcontext from '../context/AppContext';
@@ -19,6 +20,7 @@ const Main = () => {
 	const { state, dateLastMonthShowDate, removeMatch, animateArrow} = useContext(Appcontext);
 	const { matches } = state;
 	const [search, setSearch] = useState('');
+
 	//ponemos dentro values de inputs para ser usados
 	const searchInput = useRef(null);
 
@@ -32,6 +34,7 @@ const Main = () => {
 		const arrowNav = document.getElementsByClassName('score-allGames-animate')[0];
 		animateArrow(toggle,arrowNav, true);		  		
 	};
+
 	const handleSearch = useCallback(
 		() => {
 			setSearch(searchInput.current.value);
@@ -41,8 +44,7 @@ const Main = () => {
 	);
 
 	//cuando cambie characters o/y cambie search useMemo recordará
-	console.log(matches);
-	console.log(state);
+	// para qu
 	const filterPlayers = useMemo(
 		() =>
 			matches.filter((players) => {
@@ -64,7 +66,8 @@ const Main = () => {
 			}),
 		[matches, search]
 	);
-
+	
+	// elimina el registro
 	const actionDeleteMatch = match => () =>{		
 		removeMatch(match);
 	}	
@@ -72,6 +75,7 @@ const Main = () => {
 	return (
 		<div className='container'>
 			<div className='score'>
+				<h2>Table tennis match registration</h2>
 				<nav>
 					<button
 						className='score-lastMonth'
@@ -101,7 +105,7 @@ const Main = () => {
 					</ul>
 				</nav>
 				
-				
+					{/* Ponemos delante la const de tipo useMemo para optimizar. Map para que renderize los componente Match */}
 					{toggle
 						? filterPlayers.map((match) => (<Match key={match.id} match={match} actionDeleteMatch={actionDeleteMatch} animateArrow={animateArrow}/>	))
 						:  null}

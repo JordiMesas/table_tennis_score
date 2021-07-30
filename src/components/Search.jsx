@@ -1,5 +1,5 @@
 import React from 'react';
-
+//filtro
 const Search = ({search, searchInput,handleSearch}) => {
 	return (
 		<div className="score-search">

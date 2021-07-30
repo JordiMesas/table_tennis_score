@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+
+// libreria para hacer animación de despliegue animado
 import {SlideDown} from 'react-slidedown';
 
 import purpleRightArrow from '../img/chevron-right-purple.svg';
@@ -6,6 +8,7 @@ import purpleRightArrow from '../img/chevron-right-purple.svg';
 import ModalUpdateMatch from './ModalUpdateMatch';
 
 const Match = ({ match, actionDeleteMatch, animateArrow }) => {
+	
 	const [toggle, setShow] = useState(false);
 	
 	const winnerPlayer = (e) =>{

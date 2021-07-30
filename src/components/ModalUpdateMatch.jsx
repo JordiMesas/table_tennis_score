@@ -10,6 +10,7 @@ const ModalUpdateMatch = ({ match }) => {
 
 	let [validateSuccess, setvalidateSuccess] = useState(false);
 	const { updateMatch, validateFields, effectFormValidateDate } = useContext(Appcontext);
+	
 	const form = useRef(null);
 
 	const handleSubmit = () => {
