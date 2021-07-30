@@ -17,13 +17,13 @@ En el Header: a la derecha del titulo "Ping Pong Score by Jordi Mesas del Rio" h
     - **Accordion**
     
         - Arrow, despliegue del jugador que ha ganado el partido.
-        - Bontón de actualizar verde, si se le clica enzima sale un modal con un formulario con validaciones para poder actualizar la información del partido.
+        - Botón de actualizar verde, si se le clica enzima sale un modal con un formulario con validaciones para poder actualizar la información del partido.
         - Botón rojo para eliminar el registro.
 - 🏓 **_Pagina para registrar partidos_**
 
     - **Form**
     
-        - Formulario (con validaciones, el numero de partidos tiene que ser unico, cada partido tiene su numero identificativo) que si rellenamos todos los campos nos aparece un           mensaje diciendo que hemos registrado un partido satisfactoriamente, esta información nueva que hemos registrado nos aparecerá en la pagina de inicio.
+        - Formulario (con validaciones, el numero de partidos tiene que ser único, cada partido tiene su numero identificativo) que si rellenamos todos los campos nos aparece un           mensaje diciendo que hemos registrado un partido satisfactoriamente, esta información nueva que hemos registrado nos aparecerá en la página de inicio.
 
 
 
